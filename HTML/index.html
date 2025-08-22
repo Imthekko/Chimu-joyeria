@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chimu Joyeria</title>
+  <link rel="icon" href="/images/logo.png">
+  <link rel="stylesheet" href="../Styles/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+
+<div id="menu"></div>
+<script>
+  fetch("menu.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("menu").innerHTML = data;
+    });
+</script>
+
+<body>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">
+        En Chimu Joyería, cada pieza es mucho más que un accesorio: es una historia única que espera ser contada.
+      </h1>
+      <p>Descubre la joya que marcará tu momento especial.</p>
+      <a href="galeria.html" class="btn">Ver Colección</a>
+    </div>
+  </section>
+
+  <swiper-container class="mySwiper" effect="cards" grab-cursor="true">
+    <swiper-slide><img src="../images/pectoral.png" alt=""></swiper-slide>
+    <swiper-slide><img src="../images/aretes_colibri.png" alt=""></swiper-slide>
+    <swiper-slide><img src="../images/collar_colibri.png" alt=""></swiper-slide>
+    <swiper-slide><img src="../images/bambuco.png" alt=""></swiper-slide>
+    <swiper-slide><img src="../images/prendedor_sol.png" alt=""></swiper-slide>
+    <swiper-slide>
+      <source><img src="../images/filigrana.png" alt="">
+    </swiper-slide>
+    <swiper-slide><img src="../images/mariposas.png" alt=""></swiper-slide>
+    <swiper-slide><img src="../images/mariposa2.png" alt=""></swiper-slide>
+    <swiper-slide><img src="../images/collar_esmeralda.png" alt=""></swiper-slide>
+  </swiper-container>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+
+  <div id="particles-js"></div>
+
+  <script src="../Back/script.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS.load('particles-js', '../back/particles.json', function () {
+      console.log('✨ Partículas cargadas');
+    });
+  </script>
+  <section id="footer"></section>
+
+  <script>
+    fetch("footer.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("footer").innerHTML = data;
+      });
+  </script>
+</body>
+
+</html>

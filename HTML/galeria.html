@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria Chimu joyeria</title>
+    <link rel="icon" href="/images/logo.png">
+    <link rel="stylesheet" href="../Styles/style.css">
+
+</head>
+
+<div id="menu"></div>
+<script>
+    fetch("menu.html")
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById("menu").innerHTML = data;
+        });
+</script>
+<ul class="bar-galeria">
+    <li><a href="index.html" title="Click me">Anillos</a>
+    </li>
+    <li><a href="#" title="Click me">Aretes</a>
+    </li>
+    <li><a href="galeria.html" title="Click me">Collares</a>
+    </li>
+    <li><a href="#" title="Click me">Coleccion Colibri</a>
+    </li>
+    <li><a href="#" title="Click me">Coleccion Tucan Verde</a>
+    </li>
+</ul>
+
+<body>
+
+    <div id="particles-js"></div>
+
+    <script src="../Back/script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS.load('particles-js', '../back/particles.json', function () {
+            console.log('✨ Partículas cargadas');
+        });
+    </script>
+    <script src="../Back/script.js"></script>
+
+<div class="cards-grid">
+
+<!-- TARJETA 1 -->
+   <div class="card-wrapper">
+  <div class="card-container">
+    <div class="card-top"></div>
+    <div class="card-bottom">
+      
+     
+      <div class="card-left">
+        <div class="card-details">
+          <h2 class="card-title">Aretes Colibri</h2>
+          <p class="card-price">$250</p>
+        </div>
+        <div class="card-buy">
+          <img src="../images/carrito.png" alt="Carrito">
+        </div>
+      </div>
+
+     
+      <div class="card-right">
+        <div class="card-done"><i class="material-icons"><img src="../images/done.png" alt=""></i></div>
+        <div class="card-details">
+          <h2 class="card-title">Aretes Colibri</h2>
+          <p class="card-msg">Agregado a tu Carrito</p>
+        </div>
+        <div class="card-remove"><i class="material-icons"><img src="../images/remove.png" alt=""></i></div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="card-inside">
+    <div class="card-icon">
+      <img src="../images/info_outline.png" alt="info">
+    </div>
+    <div class="card-contents">
+      <table class="card-table">
+        <tr>
+          <th>Material</th>
+          <th>Hecho</th>
+        </tr>
+        <tr>
+          <td>Plata ley 950</td>
+          <td>Elaborado a mano</td>
+        </tr>
+        <tr>
+          <th>Coleccion</th>
+          <th>Por</th>
+        </tr>
+        <tr>
+          <td>Colibri</td>
+          <td>Chimu Joyeria</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- TARJETA 2 -->
+ <div class="card-wrapper">
+  <div class="card-container">
+    <div class="card-top">
+  <img src="../images/prendedor_sol.png" alt="Chair">
+</div>
+    <div class="card-bottom">
+      
+  
+      <div class="card-left">
+        <div class="card-details">
+          <h2 class="card-title">Prendedor Sol</h2>
+          <p class="card-price">$300</p>
+        </div>
+        <div class="card-buy">
+          <img src="../images/carrito.png" alt="Carrito">
+        </div>
+      </div>
+
+      <div class="card-right">
+        <div class="card-done"><i class="material-icons"><img src="../images/done.png" alt=""></i></div>
+        <div class="card-details">
+          <h2 class="card-title">Prendedor Sol</h2>
+          <p class="card-msg">Agregado a tu Carrito</p>
+        </div>
+        <div class="card-remove"><i class="material-icons"><img src="../images/remove.png" alt=""></i></div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="card-inside">
+    <div class="card-icon">
+      <img src="../images/info_outline.png" alt="info">
+    </div>
+    <div class="card-contents">
+      <table class="card-table">
+        <tr>
+          <th>Material</th>
+          <th>Hecho</th>
+        </tr>
+        <tr>
+          <td>Plata ley 950</td>
+          <td>Elaborado a mano</td>
+        </tr>
+        <tr>
+          <th>Coleccion</th>
+          <th>Por</th>
+        </tr>
+        <tr>
+          <td>Amanacer</td>
+          <td>Chimu Joyeria</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- TARJETA 3 -->
+ <div class="card-wrapper">
+  <div class="card-container">
+    <div class="card-top">
+  <img src="../images/collar_esmeralda.png" alt="Chair">
+</div>
+    <div class="card-bottom">
+  
+      <div class="card-left">
+        <div class="card-details">
+          <h2 class="card-title">Collar de Esmeralda</h2>
+          <p class="card-price">$500</p>
+        </div>
+        <div class="card-buy">
+          <img src="../images/carrito.png" alt="Carrito">
+        </div>
+      </div>
+
+
+      <div class="card-right">
+        <div class="card-done"><i class="material-icons"><img src="../images/done.png" alt=""></i></div>
+        <div class="card-details">
+          <h2 class="card-title">Collar de Esmeralda</h2>
+          <p class="card-msg">Agregado a tu Carrito</p>
+        </div>
+        <div class="card-remove"><i class="material-icons"><img src="../images/remove.png" alt=""></i></div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="card-inside">
+    <div class="card-icon">
+      <img src="../images/info_outline.png" alt="info">
+    </div>
+    <div class="card-contents">
+      <table class="card-table">
+        <tr>
+          <th>Material</th>
+          <th>Hecho</th>
+        </tr>
+        <tr>
+          <td>Plata ley 950 y esmeralda</td>
+          <td>Elaborado a mano</td>
+        </tr>
+        <tr>
+          <th>Coleccion</th>
+          <th>Por</th>
+        </tr>
+        <tr>
+          <td>Tucan verde</td>
+          <td>Chimu Joyeria</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function(){
+
+
+    $('.card-buy').click(function(){
+      $(this).closest('.card-bottom').removeClass("unclicked").addClass("clicked");
+    });
+
+    //remove
+    $('.card-remove').click(function(){
+      $(this).closest('.card-bottom').removeClass("clicked").addClass("unclicked");
+    });
+
+  });
+</script>
+
+<section id="footer"></section>
+
+  <script>
+    fetch("footer.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("footer").innerHTML = data;
+      });
+  </script>
+</body>
+
+</html>

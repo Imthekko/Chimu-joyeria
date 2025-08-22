@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Chimu</title>
+    <link rel="icon" href="/images/logo.png">
+  <link rel="stylesheet" href="../Styles/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+<div id="menu"></div>
+<script>
+  fetch("menu.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("menu").innerHTML = data;
+    });
+</script>
+<body>
+    <script>
+  // Detectar cuando cada tarjeta entra en pantalla
+  document.addEventListener("DOMContentLoaded", () => {
+    const empresaCards = document.querySelectorAll(".empresa-card");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    });
+
+    empresaCards.forEach(card => observer.observe(card));
+  });
+</script>
+
+    <section class="empresa">
+  <div class="empresa-card">
+    <div class="empresa-foto">
+      <img src="../images/adri.png" alt="Foto de la dueña">
+    </div>
+    <div class="empresa-info">
+      <h2>ADRIANA JAZMINS BOHÓRQUEZ     </h2>
+      <p>
+        Chimu joyería es una pequeña empresa dedicada al diseño y elaboración de joyas hechas a mano en plata, bronce,oro golfead y gemas semipreciosas, usando tecnicas mixtas con materiales de optima calidad.
+      </p>
+    </div>
+  </div>
+</section>
+
+    <section class="empresa">
+  <div class="empresa-card">
+    <div class="empresa-foto">
+      <img src="../images/juli.png" alt="Foto de la dueña">
+    </div>
+    <div class="empresa-info">
+      <h2>JULIAN FERNEY ARENAS</h2>
+      <p>
+        Somos una empresa artesanal, dedicada a elaborar joyería contemporánea en plata 9.50 y piedras semipreciosas tomando como base en los diseños referentes naturales tal como el colibrí quincha. Buscamos contar una historia con cada uno de nuestros diseños, estos son exclusivos y con mucho estilo
+    </div>
+  </div>
+</section>
+
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+
+  <div id="particles-js"></div>
+
+  <script src="../Back/script.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS.load('particles-js', '../back/particles.json', function () {
+      console.log('✨ Partículas cargadas');
+    });
+  </script>
+  <section id="footer"></section>
+
+  <script>
+    fetch("footer.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("footer").innerHTML = data;
+      });
+  </script>
+    
+</body>
+</html>

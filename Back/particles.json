@@ -1,0 +1,40 @@
+{
+  "particles": {
+    "number": {
+      "value": 30
+    },
+    "shape": {
+      "type": "image",
+      "image": {
+        "src": "../images/chimu.png",
+        "width": 150,
+        "height": 150
+      }
+    },
+    "size": {
+      "value": 16,
+      "random": true
+    },
+    "opacity": {
+      "value": 0.9
+    },
+    "move": {
+      "enable": true,
+      "speed": 0.3,   
+      "direction": "none",
+      "out_mode": "out"
+    },
+    "line_linked": {
+      "enable": false
+    }
+  },
+  "interactivity": {
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "repulse"
+      }
+    }
+  },
+  "retina_detect": true
+}

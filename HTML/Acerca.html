@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca del desarrollador</title>
+    <link rel="icon" href="/images/logo.png">
+  <link rel="stylesheet" href="../Styles/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+<div id="menu"></div>
+<script>
+  fetch("menu.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("menu").innerHTML = data;
+    });
+</script>
+<body>
+    <section class="about-me">
+  <div class="about-card">
+    <div class="about-photo">
+      <img src="../images/santi.png" alt="Tu nombre">
+    </div>
+    <div class="about-info">
+      <h2>Santiago Florez Bohorquez</h2>
+      <h4>Desarrollador Web & Diseñador</h4>
+      <p>
+       Soy un apasionado por la música, que es mi verdadera vocación y fuente de inspiración.
+Además, me encanta la tecnología, el diseño y la innovación, áreas en las que disfruto explorando nuevas ideas y tendencias.
+La programación para mí es más un hobbie, una forma creativa de experimentar y dar vida a proyectos digitales modernos, intuitivos y atractivos.
+Siempre busco aprender, crear y dejar una huella positiva en cada cosa que hago. 🎵💻✨
+      </p>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const observerAbout = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    });
+
+    const aboutCard = document.querySelector(".about-card");
+    if (aboutCard) observerAbout.observe(aboutCard);
+  });
+</script>
+
+
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+
+  <div id="particles-js"></div>
+
+  <script src="../Back/script.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS.load('particles-js', '../back/particles.json', function () {
+      console.log('✨ Partículas cargadas');
+    });
+  </script>
+  <section id="footer"></section>
+
+  <script>
+    fetch("footer.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("footer").innerHTML = data;
+      });
+  </script>
+</body>
+</html>
