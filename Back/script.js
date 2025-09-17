@@ -45,15 +45,35 @@ function sendPQRS() {
   const message = document.getElementById("pqrsMessage");
 
   if (input.value.trim() === "") {
-    message.textContent = "⚠️ Por favor escribe un mensaje antes de enviar.";
+    message.textContent = "Por favor escribe un mensaje antes de enviar.";
     message.style.color = "red";
-  } else {
-    message.textContent = "✅ Tu solicitud ha sido enviada. ¡Gracias por escribirnos!";
-    message.style.color = "#2d4a32";
-    input.value = ""; 
+    message.classList.remove("hidden");
+    return;
   }
 
+  message.textContent = "Enviando...";
+  message.style.color = "#333";
   message.classList.remove("hidden");
+
+  fetch("http://localhost:3000/guardar-pqrs", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ mensaje: input.value.trim() })
+  })
+  .then(res => res.json())
+  .then(data => {
+    if (data.status === "success") {
+      message.textContent = "Tu solicitud ha sido enviada. ¡Gracias por escribirnos!";
+      message.style.color = "green";
+      input.value = "";
+    } else {
+      message.textContent = "Error: " + data.message;
+      message.style.color = "red";
+    }
+  })
+  .catch(err => {
+    console.error("Error en fetch:", err);
+    message.textContent = "Hubo un error al conectar con el servidor.";
+    message.style.color = "red";
+  });
 }
-
-
