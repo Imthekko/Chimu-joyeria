@@ -333,7 +333,6 @@ swiper-slide:nth-child(10n) {
   box-shadow: 5px 20px 30px rgba(0, 0, 0, 0.2);
 }
 
-/* Container */
 .card-container {
   width: 100%;
   height: 100%;
@@ -362,7 +361,6 @@ swiper-slide:nth-child(10n) {
   transform: translateX(-50%);
 }
 
-/* Left bottom */
 .card-left {
   height: 100%;
   width: 50%;
@@ -409,11 +407,8 @@ swiper-slide:nth-child(10n) {
 
 .card-buy img {
   width: 24px;
-  /* tamaño pequeño */
   height: 24px;
-  /* igual para que quede cuadrado */
   object-fit: contain;
-  /* que no se deforme */
   display: block;
 }
 
@@ -433,7 +428,6 @@ swiper-slide:nth-child(10n) {
   color: #00394B;
 }
 
-/* Right bottom */
 .card-right {
   width: 50%;
   background: #889e85;
@@ -484,7 +478,6 @@ swiper-slide:nth-child(10n) {
   transform: translateY(-100%);
 }
 
-/* Inside part */
 .card-inside {
   z-index: 9;
   background: #889e85;
@@ -508,7 +501,6 @@ swiper-slide:nth-child(10n) {
 
 .card-icon img {
   width: 28px;
-  /* tamaño del icono */
   height: 28px;
   object-fit: contain;
   display: block;
@@ -552,7 +544,6 @@ swiper-slide:nth-child(10n) {
   color: white;
 }
 
-/* Animación de entrada (cuando se hace click en comprar) */
 @keyframes slideLeft {
   from {
     transform: translateX(0);
@@ -563,7 +554,6 @@ swiper-slide:nth-child(10n) {
   }
 }
 
-/* Animación de salida (cuando se hace click en remove) */
 @keyframes slideRight {
   from {
     transform: translateX(-50%);
@@ -581,12 +571,10 @@ swiper-slide:nth-child(10n) {
 
 }
 
-/* cuando se añade la clase clicked */
 .card-bottom.clicked {
   animation: slideLeft 0.5s forwards;
 }
 
-/* cuando se añade la clase unclicked (al dar remove) */
 .card-bottom.unclicked {
   animation: slideRight 0.5s forwards;
 }
@@ -596,34 +584,26 @@ swiper-slide:nth-child(10n) {
 .card-remove img,
 .card-icon img {
   width: 24px;
-  /* mismo tamaño que carrito */
   height: 24px;
-  /* cuadrado */
   object-fit: contain;
-  /* evita deformación */
   display: block;
   margin: auto;
-  /* centrado */
   padding: 0;
-  /* sin exceso */
 }
 
 .card-left .card-title {
   color: #222;
-  /* Negro elegante */
   font-family: 'Montserrat', sans-serif;
 }
 
 .card-left .card-price {
   color: #444;
-  /* Gris */
   font-family: 'Montserrat', sans-serif;
 }
 
-/* ===== LADO DERECHO (después de presionar carrito) ===== */
+
 .card-right .card-title {
   color: #fff;
-  /* Blanco para resaltar sobre fondo azul */
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
 }
@@ -964,9 +944,7 @@ a {
 }
 
 @media (min-width: 568px) {
-  /* .footer-content-column {
-      width: 49.99%;
-  } */
+ 
 }
 
 .pqrs-container {
@@ -975,6 +953,7 @@ a {
   padding: 40px 20px 20px 20px;
   max-width: 600px;
   position: relative;
+  z-index: 20;
 }
 
 .pqrs-container h2 {
@@ -989,7 +968,7 @@ a {
 }
 
 .pqrs-box {
-  z-index: 20;
+  z-index: 200000;
   background: #f0f4ec;
   border: 3px solid #2d4a32;
   border-radius: 20px;
@@ -1104,12 +1083,10 @@ a {
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-  /* Oculto al inicio */
   opacity: 0;
   transform: translateY(50px);
 }
 
-/* Cuando aparece en pantalla */
 .empresa-card.show {
   animation: fadeSlideUp 1s ease forwards;
 }
@@ -1201,7 +1178,7 @@ a {
   display: flex;
   align-items: center;
   max-width: 900px;
-  background: linear-gradient(135deg, #ffffff, #e8f5e9); /* blanco → verde claro */
+  background: linear-gradient(135deg, #ffffff, #e8f5e9); 
   color: #333;
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
