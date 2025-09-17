@@ -1,90 +1,85 @@
-<!DOCTYPE html>
-<html lang="en">
+  <!DOCTYPE html>
+  <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atencion al cliente</title>
-    <link rel="icon" href="/images/logo.png">
-    <link rel="stylesheet" href="../Styles/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-</head>
-<div id="menu"></div>
-<script>
-  fetch("menu.html")
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById("menu").innerHTML = data;
-    });
-</script>
-
-<body>
-
-    <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const observerPQRS = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("show");
-        }
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Atencion al cliente</title>
+      <link rel="icon" href="/images/logo.png">
+      <link rel="stylesheet" href="../Styles/style.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </head>
+  <div id="menu"></div>
+  <script>
+    fetch("menu.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("menu").innerHTML = data;
       });
+  </script>
+
+  <body>5
+
+      <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const observerPQRS = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          }
+        });
+      });
+
+
+      const pqrs = document.querySelector(".pqrs-container");
+      if (pqrs) observerPQRS.observe(pqrs);
     });
+  </script>
 
 
-    const pqrs = document.querySelector(".pqrs-container");
-    if (pqrs) observerPQRS.observe(pqrs);
-  });
-</script>
-
-
-    
-    <section class="pqrs-container">
+      
+  <section class="pqrs-container">
   <h2>📩 Atención al Cliente (PQRS)</h2>
   <p>Déjanos tu petición, queja, reclamo o sugerencia aquí:</p>
 
   <div class="pqrs-box">
- 
     <div class="pqrs-avatar">
       <img src="../images/apoyo.png" alt="Atención al Cliente">
     </div>
-  
 
-  <div class="pqrs-box">
-    <textarea id="pqrsInput" placeholder="Escribe tu mensaje aquí..."></textarea>
-    <button onclick="sendPQRS()">Enviar</button>
+    <textarea id="pqrsInput" placeholder="✍️ Escribe tu mensaje aquí..."></textarea>
+    <button type="button" onclick="sendPQRS()">Enviar</button>
     <p id="pqrsMessage" class="hidden"></p>
   </div>
 </section>
 
 
 
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 
 
+    <div id="particles-js"></div>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="../Back/script.js"></script>
 
-
-  <div id="particles-js"></div>
-
-  <script src="../Back/script.js"></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-  <script>
-    particlesJS.load('particles-js', '../back/particles.json', function () {
-      console.log('✨ Partículas cargadas');
-    });
-  </script>
-  <section id="footer"></section>
-
-  <script>
-    fetch("footer.html")
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById("footer").innerHTML = data;
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+      particlesJS.load('particles-js', '../back/particles.json', function () {
+        console.log('✨ Partículas cargadas');
       });
-  </script>
+    </script>
+    <section id="footer"></section>
 
-</body>
+    <script>
+      fetch("footer.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("footer").innerHTML = data;
+        });
+    </script>
+    <script src="script.js"></script>
 
-</html>
+  </body>
+
+  </html>
